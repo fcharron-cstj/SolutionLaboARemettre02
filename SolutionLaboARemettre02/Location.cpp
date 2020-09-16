@@ -1,6 +1,6 @@
-//But : Écrire un programme pour calculer le montant qu’un individu devra débourser pour faire un voyage dans une
-//automobile louée.
-//Auteur : Frédéric Charron
+//But : Ã‰crire un programme pour calculer le montant quâ€™un individu devra dÃ©bourser pour faire un voyage dans une
+//automobile louÃ©e.
+//Auteur : FrÃ©dÃ©ric Charron
 //Date : 2020-09-15
 
 #include <iostream>
@@ -9,22 +9,22 @@ int main()
 {
 	setlocale(LC_ALL, "");	//Accents
 
-	int jours;		//Définir les Variables
+	int jours;		//DÃ©finir les Variables
 
 	int km;
 
 
-	std::cout << "Veuillez entrer la durée du voyage (jours) : ";			//Demander le nombre de jours
+	std::cout << "Veuillez entrer la durÃ©e du voyage (jours) : ";			//Demander le nombre de jours
 
 	std::cin >> jours;
 
-	std::cout << "Veuillez entrer le kilométrage parcouru : ";
+	std::cout << "Veuillez entrer le kilomÃ©trage parcouru : ";
 
 	std::cin >> km;
 
-	if (km <= 0 || jours <= 0)							//Si l'utilisateur entre un information invalide, alors le programme arrête ici
+	if (km <= 0 || jours <= 0)							//Si l'utilisateur entre un information invalide, alors le programme arrÃªte ici
 	{
-			std::cout << "nombre de jours ou/et kilomètres invalides" << std::endl;
+			std::cout << "nombre de jours ou/et kilomÃ¨tres invalides" << std::endl;
 	}
 		
 
@@ -32,19 +32,19 @@ int main()
 	
 	else
 	{
-		if (km > 250 * jours)			//Si l'utilisateur à fait plus de 250 km/jour, alors le programme prend en compte les kilomètres en extra et envoie le message du total
+		if (km > 250 * jours)			//Si l'utilisateur Ã  fait plus de 250 km/jour, alors le programme prend en compte les kilomÃ¨tres en extra et envoie le message du total
 		{
-			std::cout << "Le montant total sera de : " << (jours * 45) + ((km - 250) * 0.05) + ((km * 0.076) * 1.25) << "$";		//  0.076 litres/km
+			std::cout << "Le montant total sera de : " << (jours * 45) + ((km - 250 * jours) * 0.05) + ((km * 0.076) * 1.25) << "$";		//  0.076 litres/km
 
 		}
 		else
 		{
-			std::cout << "Le coût sera de :" << (jours * 45) + ((km * 0.076) * 1.25) << "$";	//Cette fois si le programme ne prend pas en compte les kilomètres supplémentaires
-		}																						//Puisque dans ce cas l'utilisateur n'as pas dépassé le nb de km par jour.
+			std::cout << "Le coÃ»t sera de :" << (jours * 45) + ((km * 0.076) * 1.25) << "$";	//Cette fois si le programme ne prend pas en compte les kilomÃ¨tres supplÃ©mentaires
+		}																						//Puisque dans ce cas l'utilisateur n'as pas dÃ©passÃ© le nb de km par jour.
 	}
-	//Test 1	jours:12	km:2500		Rép:777,5$
-	//Test 2	jours:5		km:3000		rép:647.5$
-	//Test 3	jours:-12	km:0		rép:"nombre de jours ou/et kilomètres invalides"
+	//Test 1	jours:12	km:2500		RÃ©p:777,5$
+	//Test 2	jours:5		km:3000		rÃ©p:597.5$
+	//Test 3	jours:-12	km:0		rÃ©p:"nombre de jours ou/et kilomÃ¨tres invalides"
 	
 	
 	
